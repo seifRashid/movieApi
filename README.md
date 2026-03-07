@@ -11,3 +11,8 @@ The `server.js` file serves as the **entry point** of the Node.js API. It is res
 
 ### API Endpoints
 API endpoints are specific URLs on the server that allow clients to interact with the application. These endpoints handle requests and return responses for different operations such as retrieving, creating, updating, or deleting data.
+
+### To Install Prisma
+Use npx prisma init
+npm install prisma --save-dev
+npm i @prisma/client

@@ -3,12 +3,18 @@
 import express from 'express';
 //Import routes
 import movieRoutes from './routes/movieRoutes.js';
+import { config } from 'dotenv';
+import { connectDB, disconnectDB } from './config/db.js';
+
+config();
+
+
 const app = express();
 
 const PORT = 5001;
 
 //Api routes
-//it defines resourse movie actions
+//it defines movie resource actions
 app.use('/movies', movieRoutes);
 
 
