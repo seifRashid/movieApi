@@ -16,3 +16,8 @@ API endpoints are specific URLs on the server that allow clients to interact wit
 Use npx prisma init
 npm install prisma --save-dev
 npm i @prisma/client
+
+### Database Migrations
+Created the User, Movie and WatchList tables in the database
+to define the relationship with many type of relationship just add field eg movie Movie[]
+or for the child table ad field eg user User @relation(fields:[userId], references:[id], onDelete: Cascade) in this case it references the userId field in this child table ie watchList table

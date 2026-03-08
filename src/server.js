@@ -3,6 +3,7 @@
 import express from 'express';
 //Import routes
 import movieRoutes from './routes/movieRoutes.js';
+import authRoutes from './routes/authRoutes.js';
 import { config } from 'dotenv';
 import { connectDB, disconnectDB } from './config/db.js';
 
@@ -16,8 +17,10 @@ const PORT = 5001;
 //Api routes
 //it defines movie resource actions
 app.use('/movies', movieRoutes);
+app.use('/auth', authRoutes);
 
-
+// Connect to the database before starting the server
+await connectDB();
 
 app.listen(PORT, () => { // this callback runs when the server starts
     console.log(`Server is running on port ${PORT}`);
